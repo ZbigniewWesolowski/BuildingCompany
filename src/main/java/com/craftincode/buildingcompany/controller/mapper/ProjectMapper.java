@@ -26,7 +26,7 @@ public class ProjectMapper {
     @Autowired
     private SalesDocumentRepository salesDocumentRepository;
     @Autowired
-    private AddresseRepository addresseRepository;
+    private AddressRepository addressRepository;
 
     public ProjectDto fromEntityToDto(Project project) {
         List<Integer> materialListId = project.getMaterialList().stream()
@@ -56,7 +56,7 @@ public class ProjectMapper {
                 .valuation(valuationRepository.findById(createUpdateProjectDto.getValuationId()).get())
                 .materialList(materials)
                 .salesDocument(salesDocumentRepository.findById(createUpdateProjectDto.getSalesDocumentId()).get())
-                .address(addresseRepository.findById(createUpdateProjectDto.getAddressId()).get())
+                .address(addressRepository.findById(createUpdateProjectDto.getAddressId()).get())
                 .build();
 
     }
