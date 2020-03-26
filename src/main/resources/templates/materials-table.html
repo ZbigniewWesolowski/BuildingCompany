@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Materials Table</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+<table>
+    <caption>Materials</caption>
+    <tr>
+        <td> 'id:'</td>
+        <td> 'name:'</td>
+        <td> 'price:'</td>
+        <td> 'weight:'</td>
+        <td> 'supplier name:'</td>
+        <td> 'created:'</td>
+        <td> 'updated:'</td>
+        <td> 'projects Ids:'</td>
+
+    </tr>
+
+    <tr th:each="materialDto: ${materialDtos}">
+        <td th:text="${materialDto.id}"/>
+        <td th:text="${materialDto.name}"/>
+        <td th:text="${materialDto.price()}"/>
+        <td th:text="${materialDto.weight}"/>
+        <td th:text="${materialDto.supplierName}"/>
+        <td th:text="${materialDto.createdAt}"/>
+        <td th:text="${materialDto.updatedAt}"/>
+        <td th:text="${materialDto.projectListForMaterialIds}"/>
+
+    </tr>
+
+
+</table>
+</body>
+</html>

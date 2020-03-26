@@ -20,5 +20,7 @@ public class MaterialDto {
     private BigDecimal price;
     private Integer weight;
     private String supplierName;
+    private OffsetDateTime createdAt;
+    private OffsetDateTime updatedAt;
     private List<Integer> projectListForMaterialIds;
 }
