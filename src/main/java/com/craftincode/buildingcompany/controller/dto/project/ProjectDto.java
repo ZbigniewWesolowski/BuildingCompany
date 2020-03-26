@@ -14,6 +14,7 @@ import java.util.List;
 @Builder
 public class ProjectDto {
     private Integer id;
+    private String projectName;
     private ProjectStatusEnum status;
     private OffsetDateTime createdAt;
     private OffsetDateTime updatedAt;

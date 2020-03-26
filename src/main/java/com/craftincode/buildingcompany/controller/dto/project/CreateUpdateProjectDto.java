@@ -14,6 +14,7 @@ import java.util.List;
 @Builder
 public class CreateUpdateProjectDto {
     private ProjectStatusEnum status;
+    private String projectName;
     private Integer employeeId;
     private Integer valuationId;
     private List<Integer> materialListId;

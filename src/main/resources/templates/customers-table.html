@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers Table</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+<table>
+    <caption>Customers</caption>
+    <tr>
+        <td> 'id:'</td>
+        <td> 'name:'</td>
+        <td> 'surname:'</td>
+        <td> 'email:'</td>
+        <td> 'phone:'</td>
+        <td> 'created:'</td>
+        <td> 'updated:'</td>
+        <td> 'valuations Ids:'</td>
+
+
+    </tr>
+
+    <tr th:each="customerDto: ${customerDtos}">
+        <td th:text="${customerDto.id}"/>
+        <td th:text="${customerDto.name}"/>
+        <td th:text="${customerDto.surname}"/>
+        <td th:text="${customerDto.email}"/>
+        <td th:text="${customerDto.phone}"/>
+        <td th:text="${customerDto.createdAt}"/>
+        <td th:text="${customerDto.updatedAt}"/>
+        <td th:text="${customerDto.valuationsIds}"/>
+
+    </tr>
+
+
+</table>
+</body>
+</html>

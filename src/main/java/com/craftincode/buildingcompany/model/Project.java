@@ -17,6 +17,7 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    private String projectName;
     private ProjectStatusEnum status;
     private OffsetDateTime createdAt;
     private OffsetDateTime updatedAt;

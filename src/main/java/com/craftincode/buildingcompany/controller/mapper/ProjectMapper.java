@@ -34,6 +34,7 @@ public class ProjectMapper {
                 .collect(Collectors.toList());
         return ProjectDto.builder()
                 .id(project.getId())
+                .projectName(project.getProjectName())
                 .status(project.getStatus())
                 .createdAt(project.getCreatedAt())
                 .updatedAt(project.getUpdatedAt())
