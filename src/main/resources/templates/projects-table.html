@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projects Table</title>
+</head>
+<body>
+<table>
+    <caption>Projects</caption>
+    <tr>
+        <td> 'id:'</td>
+        <td> 'name:'</td>
+        <td> 'status:'</td>
+        <td> 'created:'</td>
+        <td> 'updated:'</td>
+    </tr>
+
+    <tr th:each="projectDto: ${projectsDtos}">
+        <td th:text="${projectDto.id}"/>
+        <td th:text="${projectDto.name}"/>
+        <td th:text="${projectDto.status}"/>
+        <td th:text="${projectDto.createdAt}"/>
+        <td th:text="${projectDto.updatedAt}"/>
+
+    </tr>
+
+
+</body>
+</html>

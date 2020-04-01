@@ -24,7 +24,7 @@
     <tr th:each="materialDto: ${materialDtos}">
         <td th:text="${materialDto.id}"/>
         <td th:text="${materialDto.name}"/>
-        <td th:text="${materialDto.price()}"/>
+        <td th:text="${materialDto.price}"/>
         <td th:text="${materialDto.weight}"/>
         <td th:text="${materialDto.supplierName}"/>
         <td th:text="${materialDto.createdAt}"/>
