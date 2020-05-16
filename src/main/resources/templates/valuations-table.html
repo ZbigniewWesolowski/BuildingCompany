@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" type="text/css" href="styles2.css">
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Projects Table</title>
+    <title>Valuations Table</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
 </head>
 <body>
 <h1>
@@ -23,24 +22,30 @@
     </ul>
 </nav>
 <table>
-    <caption>Projects</caption>
+
+    <caption>Valuations</caption>
     <tr>
         <td> 'id:'</td>
-        <td> 'name:'</td>
         <td> 'status:'</td>
+        <td> 'customer id:'</td>
+        <td> 'project id:'</td>
         <td> 'created:'</td>
         <td> 'updated:'</td>
-    </tr>
 
-    <tr th:each="projectDto: ${projectsDtos}">
-        <td th:text="${projectDto.id}"/>
-        <td th:text="${projectDto.name}"/>
-        <td th:text="${projectDto.status}"/>
-        <td th:text="${projectDto.createdAt}"/>
-        <td th:text="${projectDto.updatedAt}"/>
 
     </tr>
 
+    <tr th:each="valuationDto: ${valuationsDtos}">
+        <td th:text="${valuationDto.id}"/>
+        <td th:text="${valuationDto.status}"/>
+        <td th:text="${valuationDto.customerId}"/>
+        <td th:text="${valuationDto.projectId}"/>
+        <td th:text="${valuationDto.createdAt}"/>
+        <td th:text="${valuationDto.updatedAt}"/>
 
+    </tr>
+
+
+</table>
 </body>
 </html>
