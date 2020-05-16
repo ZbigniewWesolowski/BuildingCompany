@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Documents Table</title>
+</head>
+<body>
+<table>
+    <caption>Sales Documents</caption>
+    <tr>
+        <td> 'id:'</td>
+        <td> 'type:'</td>
+        <td> 'status:'</td>
+           <td> 'created:'</td>
+        <td> 'updated:'</td>
+    </tr>
+
+    <tr th:each="salesDocumentDto: ${salesDocumentDtos}">
+        <td th:text="${salesDocumentDto.id}"/>
+        <td th:text="${projectDto.type}"/>
+        <td th:text="${projectDto.status}"/>
+        <td th:text="${projectDto.createdAt}"/>
+        <td th:text="${projectDto.updatedAt}"/>
+
+    </tr>
+</table>
+</body>
+</html>
